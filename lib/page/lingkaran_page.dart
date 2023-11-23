@@ -32,7 +32,7 @@ class LingkaranPage extends StatelessWidget {
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/lg.png"),
+            Image.asset("asset/lg.png"),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
