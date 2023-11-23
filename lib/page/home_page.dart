@@ -1,3 +1,4 @@
+import 'package:bangun_datar_kelas_c/page/persegi_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,7 +20,11 @@ class HomePage extends StatelessWidget {
               Expanded(child:
               Row(
                 children: [
-                 Expanded(child: CustomMenu(title: "persegi",imageAsset: "asset/kotak.png")),
+                 Expanded(child: InkWell(
+                     onTap: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>PersegiPage()));
+                     },
+                     child: CustomMenu(title: "persegi",imageAsset: "asset/kotak.png"))),
                  Expanded(child: CustomMenu(title: "persegi panjang",imageAsset: "asset/pp.png")),
                 ],
 
@@ -60,7 +65,7 @@ class CustomMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-        height: 400,
+       height: 400,
         margin: EdgeInsets.symmetric(
             horizontal: 16, vertical: 8
         ),
